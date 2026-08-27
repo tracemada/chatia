@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-100 font-sans selection:bg-sky-500/30 selection:text-sky-200;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-700/50 hover:bg-slate-600 rounded-full transition-colors;
+}
+
+/* Prism syntax highlighting custom tweaks */
+pre[class*="language-"] {
+  @apply rounded-xl p-4 my-2 overflow-x-auto bg-slate-950 border border-slate-800 text-sm font-mono;
+}
+
+code[class*="language-"] {
+  @apply font-mono text-sm;
+}
